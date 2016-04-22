@@ -10,7 +10,7 @@ package co.aartea.tic_tac_toe;
  */
 public class t3Helper {
 
-    int counter = 0;
+    //int counter = 0;
 
     //Use an intent to handle key of p1 and p2's position and map it against
     //HashMap.
@@ -19,11 +19,12 @@ public class t3Helper {
     //Counter method; used for differentiating between p1 and p2 turns. Requires sharedpref.
     public void setCounter(int counter){
         counter++;
+
     }
 
-    public void playerTurn(int counter){
-        if(p1%1 == counter)
-    }
+//    public void playerTurn(int counter){
+//
+//    }
 
 
 }
