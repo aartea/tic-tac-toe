@@ -12,12 +12,14 @@ import android.widget.Button;
 public class GameActivity extends AppCompatActivity{
 
     Button n1,n2,n3,n4,n5,n6,n7,n8,n9;
-    
+
     String player1, player2;
     int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
@@ -34,8 +36,6 @@ public class GameActivity extends AppCompatActivity{
         player1 = "X";      //mod2 == 0; even
         player2 = "O";      //mod2 == 1; odd
 
-
-
         n1.setOnClickListener(new View.OnClickListener() {
             int tile = 0;
             @Override
@@ -46,6 +46,7 @@ public class GameActivity extends AppCompatActivity{
                 else {
                     n1.setText(player2);
                 }
+                counter++;
             }
 
         });
@@ -58,10 +59,12 @@ public class GameActivity extends AppCompatActivity{
                     n2.setText(player1);
                    // game.boardState(player1,tile);
                 }
-                else
-                    n2.setText(player2);
+                else{
+                    n2.setText(player2);}
                    // game.boardState(player2,tile);
+                counter++;
             }
+
         });
 
         n3.setOnClickListener(new View.OnClickListener() {
@@ -71,8 +74,10 @@ public class GameActivity extends AppCompatActivity{
                 if(counter%2 == 0){
                     n3.setText(player1);
                 }
-                else
+                else {
                     n3.setText(player2);
+                }
+                counter++;
             }
         });
 
@@ -82,8 +87,10 @@ public class GameActivity extends AppCompatActivity{
                 if(counter%2 == 0){
                     n4.setText(player1);
                 }
-                else
+                else {
                     n4.setText(player2);
+                }
+                counter++;
             }
         });
 
@@ -93,8 +100,10 @@ public class GameActivity extends AppCompatActivity{
                 if(counter%2 == 0){
                     n5.setText(player1);
                 }
-                else
+                else {
                     n5.setText(player2);
+                }
+                counter++;
             }
         });
 
@@ -104,8 +113,9 @@ public class GameActivity extends AppCompatActivity{
                 if(counter%2 == 0){
                     n6.setText(player1);
                 }
-                else
+                else {
                     n6.setText(player2);
+                }
             }
         });
 
@@ -115,8 +125,10 @@ public class GameActivity extends AppCompatActivity{
                 if(counter%2 == 0){
                     n7.setText(player1);
                 }
-                else
+                else {
                     n7.setText(player2);
+                }
+                counter++;
             }
         });
 
@@ -126,8 +138,10 @@ public class GameActivity extends AppCompatActivity{
                 if(counter%2 == 0){
                     n8.setText(player1);
                 }
-                else
+                else{
                     n8.setText(player2);
+                }
+                counter++;
             }
         });
 
@@ -137,11 +151,11 @@ public class GameActivity extends AppCompatActivity{
                 if(counter%2 == 0){
                     n9.setText(player1);
                 }
-                else
+                else {
                     n9.setText(player2);
+                }
+                counter++;
             }
         });
-
-        counter++;
-    }
-}
+    }//Ends method onCreate
+}//Ends class GameActivity
