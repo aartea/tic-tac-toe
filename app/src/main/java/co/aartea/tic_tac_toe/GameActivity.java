@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 //Project notes: When 'X' is clicked; change color with dark blue text, light blue background
 //'O' is clicked -- display dark red text; light red background.
@@ -11,7 +12,7 @@ import android.widget.Button;
 
 public class GameActivity extends AppCompatActivity{
 
-    t3Helper game = new t3Helper();
+
     Button n1,n2,n3,n4,n5,n6,n7,n8,n9;
 
     String position;                    //Stores a positional value via column/row array
@@ -34,124 +35,135 @@ public class GameActivity extends AppCompatActivity{
         n9 = (Button) findViewById(R.id.n9);
 
         player1 = "X";      //mod2 == 0; even
-        player2 = "O";      //mod2 == 1; odd
+        player2 = "O";
+
+        //mod2 == 1; odd
 
         n1.setOnClickListener(new View.OnClickListener() {
+            int tile = 0;
             @Override
             public void onClick(View v) {
                 if(counter%2 == 0){
                     n1.setText(player1);
-                    game.boardState([0][1]);
+                    game.boardState(player1, tile);
+
                 }
-                else
+                else {
                     n1.setText(player2);
-                    game.boardState(player2);
+                    game.boardState(player2,tile);
+                }
+                if (game.winCheck()){
+                    Toast.makeText(GameActivity.this, "winner", Toast.LENGTH_SHORT).show();
+                };
             }
+
         });
 
         n2.setOnClickListener(new View.OnClickListener() {
+            int tile = 1;
             @Override
             public void onClick(View v) {
                 if(counter%2 == 0){
                     n2.setText(player1);
-                    game.boardState(player1);
+                    game.boardState(player1,tile);
                 }
                 else
                     n2.setText(player2);
-                    game.boardState(player2);
+                    game.boardState(player2,tile);
             }
         });
 
         n3.setOnClickListener(new View.OnClickListener() {
+            int tile = 2;
             @Override
             public void onClick(View v) {
                 if(counter%2 == 0){
                     n3.setText(player1);
-                    game.boardState(player1);
+                    game.boardState(player1, tile);
                 }
                 else
                     n3.setText(player2);
-                    game.boardState(player2);
+                    game.boardState(player2, tile);
             }
         });
 
-        n4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(counter%2 == 0){
-                    n4.setText(player1);
-                    game.boardState(player1);
-                }
-                else
-                    n4.setText(player2);
-                    game.boardState(player2);
-            }
-        });
-
-        n5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(counter%2 == 0){
-                    n5.setText(player1);
-                    game.boardState(player1);
-                }
-                else
-                    n5.setText(player2);
-                    game.boardState(player2);
-            }
-        });
-
-        n6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(counter%2 == 0){
-                    n6.setText(player1);
-                    game.boardState(player1);
-                }
-                else
-                    n6.setText(player2);
-                    game.boardState(player2);
-            }
-        });
-
-        n7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(counter%2 == 0){
-                    n7.setText(player1);
-                    game.boardState(player1);
-                }
-                else
-                    n7.setText(player2);
-                    game.boardState(player2);
-            }
-        });
-
-        n8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(counter%2 == 0){
-                    n8.setText(player1);
-                    game.boardState(player1);
-                }
-                else
-                    n8.setText(player2);
-                    game.boardState(player2);
-            }
-        });
-
-        n9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(counter%2 == 0){
-                    n9.setText(player1);
-                    game.boardState(player1);
-                }
-                else
-                    n9.setText(player2);
-                    game.boardState(player2);
-            }
-        });
+//        n4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(counter%2 == 0){
+//                    n4.setText(player1);
+//                    game.boardState(player1);
+//                }
+//                else
+//                    n4.setText(player2);
+//                    game.boardState(player2);
+//            }
+//        });
+//
+//        n5.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(counter%2 == 0){
+//                    n5.setText(player1);
+//                    game.boardState(player1);
+//                }
+//                else
+//                    n5.setText(player2);
+//                    game.boardState(player2);
+//            }
+//        });
+//
+//        n6.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(counter%2 == 0){
+//                    n6.setText(player1);
+//                    game.boardState(player1);
+//                }
+//                else
+//                    n6.setText(player2);
+//                    game.boardState(player2);
+//            }
+//        });
+//
+//        n7.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(counter%2 == 0){
+//                    n7.setText(player1);
+//                    game.boardState(player1);
+//                }
+//                else
+//                    n7.setText(player2);
+//                    game.boardState(player2);
+//            }
+//        });
+//
+//        n8.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(counter%2 == 0){
+//                    n8.setText(player1);
+//                    game.boardState(player1);
+//                }
+//                else
+//                    n8.setText(player2);
+//                    game.boardState(player2);
+//            }
+//        });
+//
+//        n9.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(counter%2 == 0){
+//                    n9.setText(player1);
+//                    game.boardState(player1);
+//                }
+//                else
+//                    n9.setText(player2);
+//                    game.boardState(player2);
+//            }
+//        });
 
 //        //Pass seed of button clicked, this will start our game.
 //        Intent pass = new Intent();
