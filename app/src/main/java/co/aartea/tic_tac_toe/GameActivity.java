@@ -39,39 +39,34 @@ public class GameActivity extends AppCompatActivity{
         player2 = "X";      //mod2 == 1; odd
 
         n1.setOnClickListener(new View.OnClickListener() {
-            int tile = 0;
-
             @Override
             public void onClick(View v) {
-
-                    if (counter % 2 == 0) {
-                        n1.setText(player1);
-                        board[0] = player1;
-                        }
-                    else {
-                        n1.setText(player2);
-                        board[0] = player2;
-                    }
-                isWin();
+            if(!isWin()) {
+                if (counter % 2 == 0) {
+                    n1.setText(player1);
+                    board[0] = player1;
+                } else {
+                    n1.setText(player2);
+                    board[0] = player2;
+                }
+            }
                 n1.setClickable(false);
                 counter++;
             }
         });
 
         n2.setOnClickListener(new View.OnClickListener() {
-            int tile = 1;
-
             @Override
             public void onClick(View v) {
+                if(!isWin()) {
                     if (counter % 2 == 0) {
                         n2.setText(player1);
                         board[1] = player1;
-                    }
-                    else {
+                    } else {
                         n2.setText(player2);
                         board[1] = player2;
                     }
-                isWin();
+                }
                 n2.setClickable(false);
                 counter++;
             }
@@ -79,19 +74,17 @@ public class GameActivity extends AppCompatActivity{
         });
 
         n3.setOnClickListener(new View.OnClickListener() {
-            int tile = 2;
-
             @Override
             public void onClick(View v) {
+                if(!isWin()) {
                     if (counter % 2 == 0) {
                         n3.setText(player1);
                         board[2] = player1;
-                    }
-                    else {
+                    } else {
                         n3.setText(player2);
                         board[2] = player2;
                     }
-                isWin();
+                }
                 n3.setClickable(false);
                 counter++;
             }
@@ -100,15 +93,15 @@ public class GameActivity extends AppCompatActivity{
         n4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!isWin()) {
                     if (counter % 2 == 0) {
                         n4.setText(player1);
                         board[3] = player1;
-                    }
-                    else {
+                    } else {
                         n4.setText(player2);
                         board[3] = player2;
                     }
-                isWin();
+                }
                 n4.setClickable(false);
                 counter++;
             }
@@ -117,15 +110,15 @@ public class GameActivity extends AppCompatActivity{
         n5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!isWin()) {
                     if (counter % 2 == 0) {
                         n5.setText(player1);
                         board[4] = player1;
-                    }
-                    else {
+                    } else {
                         n5.setText(player2);
                         board[4] = player2;
                     }
-                isWin();
+                }
                 n5.setClickable(false);
                 counter++;
             }
@@ -134,15 +127,15 @@ public class GameActivity extends AppCompatActivity{
         n6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!isWin()) {
                     if (counter % 2 == 0) {
                         n6.setText(player1);
                         board[5] = player1;
-                    }
-                    else {
+                    } else {
                         n6.setText(player2);
                         board[5] = player2;
                     }
-                isWin();
+                }
                 n6.setClickable(false);
                 counter++;
             }
@@ -151,15 +144,15 @@ public class GameActivity extends AppCompatActivity{
         n7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!isWin()) {
                     if (counter % 2 == 0) {
                         n7.setText(player1);
                         board[6] = player1;
-                    }
-                    else {
+                    } else {
                         n7.setText(player2);
                         board[6] = player2;
                     }
-                isWin();
+                }
                 n7.setClickable(false);
                 counter++;
             }
@@ -168,15 +161,15 @@ public class GameActivity extends AppCompatActivity{
         n8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!isWin()) {
                     if (counter % 2 == 0) {
                         n8.setText(player1);
                         board[7] = player1;
-                    }
-                    else {
+                    } else {
                         n8.setText(player2);
                         board[7] = player2;
                     }
-                isWin();
+                }
                 n8.setClickable(false);
                 counter++;
             }
@@ -185,15 +178,15 @@ public class GameActivity extends AppCompatActivity{
         n9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!isWin()) {
                     if (counter % 2 == 0) {
                         n9.setText(player1);
                         board[8] = player1;
-                    }
-                    else {
+                    } else {
                         n9.setText(player2);
                         board[8] = player2;
                     }
-                isWin();
+                }
                 n9.setClickable(false);
                 counter++;
             }
