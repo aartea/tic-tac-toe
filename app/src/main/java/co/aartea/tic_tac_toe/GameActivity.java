@@ -43,6 +43,8 @@ public class GameActivity extends AppCompatActivity{
         player1 = "O";      //mod2 == 0; even
         player2 = "X";      //mod2 == 1; odd
 
+        Toast.makeText(GameActivity.this, "", Toast.LENGTH_SHORT).show();
+
         n1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -287,6 +289,9 @@ public class GameActivity extends AppCompatActivity{
         });
     }//Ends method onCreate
 
+        //isWin() still needs cats game!
+        //Dialog box that asks if you want a new game or to quit
+    
         public boolean isWin(){
 
         //Win via row
