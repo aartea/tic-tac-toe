@@ -1,5 +1,6 @@
 package co.aartea.tic_tac_toe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -49,6 +50,7 @@ public class GameActivity extends AppCompatActivity{
             if(!isWin()) {
                 if (counter % 2 == 0) {
                     n1.setText(player1);
+                    tv.setText(setTextPlayer(player1)+"'s Turn");
                     board[0] = player1;
                 } else {
                     n1.setText(player2);
@@ -58,11 +60,12 @@ public class GameActivity extends AppCompatActivity{
              }
             if(isWin() && counter%2==0){
                 tv.setText("Player1 wins");
+                viewImport();
                 }
             else if(isWin() && counter%2==1){
                 tv.setText("Player2 wins");
+                viewImport();
                 }
-                n1.setClickable(false);
             }
         });
 
@@ -79,13 +82,14 @@ public class GameActivity extends AppCompatActivity{
                         board[1] = player2;
                     }
                     n2.setClickable(false);
-
                 }
                 if(isWin() && counter%2==0){
                     tv.setText("Player1 wins");
+                    viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText("Player2 wins");
+                    viewImport();
                 }
             }
         });
@@ -103,13 +107,14 @@ public class GameActivity extends AppCompatActivity{
                         board[2] = player2;
                     }
                     n3.setClickable(false);
-
                 }
                 if(isWin() && counter%2==0){
                     tv.setText("Player1 wins");
+                    viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText("Player2 wins");
+                    viewImport();
                 }
             }
         });
@@ -127,13 +132,14 @@ public class GameActivity extends AppCompatActivity{
                         board[3] = player2;
                     }
                     n4.setClickable(false);
-
                 }
                 if(isWin() && counter%2==0){
                     tv.setText("Player1 wins");
+                    viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText("Player2 wins");
+                    viewImport();
                 }
             }
         });
@@ -151,13 +157,14 @@ public class GameActivity extends AppCompatActivity{
                         board[4] = player2;
                     }
                     n5.setClickable(false);
-
                 }
                 if(isWin() && counter%2==0){
                     tv.setText("Player1 wins");
+                    viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText("Player2 wins");
+                    viewImport();
                 }
             }
         });
@@ -175,13 +182,14 @@ public class GameActivity extends AppCompatActivity{
                         board[5] = player2;
                     }
                     n6.setClickable(false);
-
                 }
                 if(isWin() && counter%2==0){
                     tv.setText("Player1 wins");
+                    viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText("Player2 wins");
+                    viewImport();
                 }
             }
         });
@@ -199,13 +207,14 @@ public class GameActivity extends AppCompatActivity{
                         board[6] = player2;
                     }
                     n7.setClickable(false);
-
                 }
                 if(isWin() && counter%2==0){
                     tv.setText("Player1 wins");
+                    viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText("Player2 wins");
+                    viewImport();
                 }
             }
         });
@@ -223,13 +232,14 @@ public class GameActivity extends AppCompatActivity{
                         board[7] = player2;
                     }
                     n8.setClickable(false);
-
                 }
                 if(isWin() && counter%2==0){
                     tv.setText("Player1 wins");
+                    viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText("Player2 wins");
+                    viewImport();
                 }
             }
         });
@@ -247,13 +257,14 @@ public class GameActivity extends AppCompatActivity{
                         board[8] = player2;
                     }
                     n9.setClickable(false);
-
                 }
                 if(isWin() && counter%2==0){
                     tv.setText("Player1 wins");
+                    viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText("Player2 wins");
+                    viewImport();
                 }
             }
         });
@@ -299,4 +310,30 @@ public class GameActivity extends AppCompatActivity{
         }
             return false;
         }
+
+    public void viewImport(){
+        n1.setClickable(false);
+        n2.setClickable(false);
+        n3.setClickable(false);
+        n4.setClickable(false);
+        n5.setClickable(false);
+        n6.setClickable(false);
+        n7.setClickable(false);
+        n8.setClickable(false);
+        n9.setClickable(false);
+    }
+
+    public String setTextPlayer(String g){
+        Intent beamMeUp = getIntent();
+        String s1;
+
+         if(g.equalsIgnoreCase("O")) {
+             s1 = beamMeUp.getStringExtra("p1");
+             return s1;
+         }
+         else{
+            s1 = beamMeUp.getStringExtra("p2");
+            return s1;
+        }
+    }
 }//Ends class GameActivity
