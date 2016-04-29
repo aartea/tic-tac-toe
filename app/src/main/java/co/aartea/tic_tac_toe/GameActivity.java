@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 //Project notes: When 'X' is clicked; change color with dark blue text, light blue background
@@ -13,6 +14,7 @@ import android.widget.Toast;
 public class GameActivity extends AppCompatActivity{
 
     Button n1,n2,n3,n4,n5,n6,n7,n8,n9;
+    TextView tv;
 
     String player1, player2;
     int counter = 0;
@@ -35,12 +37,15 @@ public class GameActivity extends AppCompatActivity{
         n8 = (Button) findViewById(R.id.n8);
         n9 = (Button) findViewById(R.id.n9);
 
+        tv = (TextView) findViewById(R.id.tv);
+
         player1 = "O";      //mod2 == 0; even
         player2 = "X";      //mod2 == 1; odd
 
         n1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+             counter++;
             if(!isWin()) {
                 if (counter % 2 == 0) {
                     n1.setText(player1);
@@ -49,15 +54,22 @@ public class GameActivity extends AppCompatActivity{
                     n1.setText(player2);
                     board[0] = player2;
                 }
-            }
                 n1.setClickable(false);
-                counter++;
+             }
+            if(isWin() && counter%2==0){
+                tv.setText("Player1 wins");
+                }
+            else if(isWin() && counter%2==1){
+                tv.setText("Player2 wins");
+                }
+                n1.setClickable(false);
             }
         });
 
         n2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n2.setText(player1);
@@ -66,16 +78,22 @@ public class GameActivity extends AppCompatActivity{
                         n2.setText(player2);
                         board[1] = player2;
                     }
-                }
-                n2.setClickable(false);
-                counter++;
-            }
+                    n2.setClickable(false);
 
+                }
+                if(isWin() && counter%2==0){
+                    tv.setText("Player1 wins");
+                }
+                else if(isWin() && counter%2==1){
+                    tv.setText("Player2 wins");
+                }
+            }
         });
 
         n3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n3.setText(player1);
@@ -84,15 +102,22 @@ public class GameActivity extends AppCompatActivity{
                         n3.setText(player2);
                         board[2] = player2;
                     }
+                    n3.setClickable(false);
+
                 }
-                n3.setClickable(false);
-                counter++;
+                if(isWin() && counter%2==0){
+                    tv.setText("Player1 wins");
+                }
+                else if(isWin() && counter%2==1){
+                    tv.setText("Player2 wins");
+                }
             }
         });
 
         n4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n4.setText(player1);
@@ -101,15 +126,22 @@ public class GameActivity extends AppCompatActivity{
                         n4.setText(player2);
                         board[3] = player2;
                     }
+                    n4.setClickable(false);
+
                 }
-                n4.setClickable(false);
-                counter++;
+                if(isWin() && counter%2==0){
+                    tv.setText("Player1 wins");
+                }
+                else if(isWin() && counter%2==1){
+                    tv.setText("Player2 wins");
+                }
             }
         });
 
         n5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n5.setText(player1);
@@ -118,15 +150,22 @@ public class GameActivity extends AppCompatActivity{
                         n5.setText(player2);
                         board[4] = player2;
                     }
+                    n5.setClickable(false);
+
                 }
-                n5.setClickable(false);
-                counter++;
+                if(isWin() && counter%2==0){
+                    tv.setText("Player1 wins");
+                }
+                else if(isWin() && counter%2==1){
+                    tv.setText("Player2 wins");
+                }
             }
         });
 
         n6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n6.setText(player1);
@@ -135,15 +174,22 @@ public class GameActivity extends AppCompatActivity{
                         n6.setText(player2);
                         board[5] = player2;
                     }
+                    n6.setClickable(false);
+
                 }
-                n6.setClickable(false);
-                counter++;
+                if(isWin() && counter%2==0){
+                    tv.setText("Player1 wins");
+                }
+                else if(isWin() && counter%2==1){
+                    tv.setText("Player2 wins");
+                }
             }
         });
 
         n7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n7.setText(player1);
@@ -152,15 +198,22 @@ public class GameActivity extends AppCompatActivity{
                         n7.setText(player2);
                         board[6] = player2;
                     }
+                    n7.setClickable(false);
+
                 }
-                n7.setClickable(false);
-                counter++;
+                if(isWin() && counter%2==0){
+                    tv.setText("Player1 wins");
+                }
+                else if(isWin() && counter%2==1){
+                    tv.setText("Player2 wins");
+                }
             }
         });
 
         n8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n8.setText(player1);
@@ -169,15 +222,22 @@ public class GameActivity extends AppCompatActivity{
                         n8.setText(player2);
                         board[7] = player2;
                     }
+                    n8.setClickable(false);
+
                 }
-                n8.setClickable(false);
-                counter++;
+                if(isWin() && counter%2==0){
+                    tv.setText("Player1 wins");
+                }
+                else if(isWin() && counter%2==1){
+                    tv.setText("Player2 wins");
+                }
             }
         });
 
         n9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                counter++;
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n9.setText(player1);
@@ -186,14 +246,21 @@ public class GameActivity extends AppCompatActivity{
                         n9.setText(player2);
                         board[8] = player2;
                     }
+                    n9.setClickable(false);
+
                 }
-                n9.setClickable(false);
-                counter++;
+                if(isWin() && counter%2==0){
+                    tv.setText("Player1 wins");
+                }
+                else if(isWin() && counter%2==1){
+                    tv.setText("Player2 wins");
+                }
             }
         });
     }//Ends method onCreate
 
         public boolean isWin(){
+
         //Win via row
         if((board[0].equalsIgnoreCase(board[1])) && (board[0].equalsIgnoreCase(board[2]))){
             Toast.makeText(GameActivity.this, "Winner!", Toast.LENGTH_SHORT).show();
@@ -203,7 +270,7 @@ public class GameActivity extends AppCompatActivity{
             Toast.makeText(GameActivity.this, "Winner!", Toast.LENGTH_SHORT).show();
             return true;
         }
-        else if((board[6] == board[7]) && (board[6] == board[8])){
+        else if((board[6].equalsIgnoreCase(board[7])) && (board[6].equalsIgnoreCase(board[8]))){
             Toast.makeText(GameActivity.this, "Winner!", Toast.LENGTH_SHORT).show();
             return true;
         }
@@ -216,16 +283,16 @@ public class GameActivity extends AppCompatActivity{
                 Toast.makeText(GameActivity.this, "Winner!", Toast.LENGTH_SHORT).show();
                 return true;
             }
-            else if((board[2] == board[7]) && (board[5] == board[8])){
+            else if((board[2].equalsIgnoreCase(board[7])) && (board[5].equalsIgnoreCase(board[8]))){
                 Toast.makeText(GameActivity.this, "Winner!", Toast.LENGTH_SHORT).show();
                 return true;
             }
         //Win via diagonal
-        else if((board[0] == board[4]) && (board[0] == board[8])){
+        else if((board[0].equalsIgnoreCase(board[4])) && (board[0].equalsIgnoreCase(board[8]))){
             Toast.makeText(GameActivity.this, "Diagonal Winner!", Toast.LENGTH_SHORT).show();
             return true;
         }
-        else if((board[2] == board[4]) && (board[2] == board[6])){
+        else if((board[2].equalsIgnoreCase(board[4])) && (board[2].equalsIgnoreCase(board[6]))){
             Toast.makeText(GameActivity.this, "Diagonal Winner!", Toast.LENGTH_SHORT).show();
             return true;
 
