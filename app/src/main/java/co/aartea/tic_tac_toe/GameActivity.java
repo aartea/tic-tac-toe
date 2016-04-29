@@ -1,6 +1,7 @@
 package co.aartea.tic_tac_toe;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,7 +14,7 @@ import android.widget.Toast;
 //Refactor -- iterate buttons and setOnItemClickListeners();
 
 public class GameActivity extends AppCompatActivity{
-
+    public static final String PREFERENCE = "Pref";
     Button n1,n2,n3,n4,n5,n6,n7,n8,n9;
     TextView tv;
 
@@ -63,10 +64,12 @@ public class GameActivity extends AppCompatActivity{
              }
             if(isWin() && counter%2==0){
                 tv.setText(setTextPlayer(player1)+" Wins!");
+                sharedPref(setTextPlayer(player1));
                 viewImport();
                 }
             else if(isWin() && counter%2==1){
                 tv.setText(setTextPlayer(player2)+" Wins!");
+                sharedPref(setTextPlayer(player2));
                 viewImport();
                 }
             }
@@ -90,10 +93,12 @@ public class GameActivity extends AppCompatActivity{
                 }
                 if(isWin() && counter%2==0){
                     tv.setText(setTextPlayer(player1)+" Wins!");
+                    sharedPref(setTextPlayer(player1));
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText(setTextPlayer(player2)+" Wins!");
+                    sharedPref(setTextPlayer(player2));
                     viewImport();
                 }
             }
@@ -117,10 +122,12 @@ public class GameActivity extends AppCompatActivity{
                 }
                 if(isWin() && counter%2==0){
                     tv.setText(setTextPlayer(player1)+" Wins!");
+                    sharedPref(setTextPlayer(player1));
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText(setTextPlayer(player2)+" Wins!");
+                    sharedPref(setTextPlayer(player2));
                     viewImport();
                 }
             }
@@ -144,10 +151,12 @@ public class GameActivity extends AppCompatActivity{
                 }
                 if(isWin() && counter%2==0){
                     tv.setText(setTextPlayer(player1)+" Wins!");
+                    sharedPref(setTextPlayer(player1));
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText(setTextPlayer(player2)+" Wins!");
+                    sharedPref(setTextPlayer(player2));
                     viewImport();
                 }
             }
@@ -171,10 +180,12 @@ public class GameActivity extends AppCompatActivity{
                 }
                 if(isWin() && counter%2==0){
                     tv.setText(setTextPlayer(player1)+" Wins!");
+                    sharedPref(setTextPlayer(player1));
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText(setTextPlayer(player2)+" Wins!");
+                    sharedPref(setTextPlayer(player2));
                     viewImport();
                 }
             }
@@ -198,10 +209,12 @@ public class GameActivity extends AppCompatActivity{
                 }
                 if(isWin() && counter%2==0){
                     tv.setText(setTextPlayer(player1)+" Wins!");
+                    sharedPref(setTextPlayer(player1));
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText(setTextPlayer(player2)+" Wins!");
+                    sharedPref(setTextPlayer(player2));
                     viewImport();
                 }
             }
@@ -225,10 +238,12 @@ public class GameActivity extends AppCompatActivity{
                 }
                 if(isWin() && counter%2==0){
                     tv.setText(setTextPlayer(player1)+" Wins!");
+                    sharedPref(setTextPlayer(player1));
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText(setTextPlayer(player2)+" Wins!");
+                    sharedPref(setTextPlayer(player2));
                     viewImport();
                 }
             }
@@ -252,10 +267,12 @@ public class GameActivity extends AppCompatActivity{
                 }
                 if(isWin() && counter%2==0){
                     tv.setText(setTextPlayer(player1)+" Wins!");
+                    sharedPref(setTextPlayer(player1));
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText(setTextPlayer(player2)+" Wins!");
+                    sharedPref(setTextPlayer(player2));
                     viewImport();
                 }
             }
@@ -279,10 +296,12 @@ public class GameActivity extends AppCompatActivity{
                 }
                 if(isWin() && counter%2==0){
                     tv.setText(setTextPlayer(player1)+" Wins!");
+                    sharedPref(setTextPlayer(player1));
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
                     tv.setText(setTextPlayer(player2)+" Wins!");
+                    sharedPref(setTextPlayer(player2));
                     viewImport();
                 }
             }
@@ -291,7 +310,7 @@ public class GameActivity extends AppCompatActivity{
 
         //isWin() still needs cats game!
         //Dialog box that asks if you want a new game or to quit
-    
+
         public boolean isWin(){
 
         //Win via row
@@ -357,5 +376,13 @@ public class GameActivity extends AppCompatActivity{
             s1 = beamMeUp.getStringExtra("p2");
             return s1;
         }
+    }
+
+    public void sharedPref(String g){
+
+        SharedPreferences sp = getApplicationContext().getSharedPreferences("winner", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString("winner",g);
+        editor.commit();
     }
 }//Ends class GameActivity
