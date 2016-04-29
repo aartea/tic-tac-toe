@@ -16,7 +16,7 @@
         android:textColor="#5ba1a1"
         android:textAlignment="center"
         android:textSize="45dp"
-        android:text="sample"
+        android:text="Tic-Tac-Toe"
         android:id="@+id/tv"/>
 
     <GridLayout
