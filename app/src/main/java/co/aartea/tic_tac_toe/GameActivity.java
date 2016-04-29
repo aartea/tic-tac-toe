@@ -54,16 +54,17 @@ public class GameActivity extends AppCompatActivity{
                     board[0] = player1;
                 } else {
                     n1.setText(player2);
+                    tv.setText(setTextPlayer(player2)+"'s Turn");
                     board[0] = player2;
                 }
                 n1.setClickable(false);
              }
             if(isWin() && counter%2==0){
-                tv.setText("Player1 wins");
+                tv.setText(setTextPlayer(player1)+" Wins!");
                 viewImport();
                 }
             else if(isWin() && counter%2==1){
-                tv.setText("Player2 wins");
+                tv.setText(setTextPlayer(player2)+" Wins!");
                 viewImport();
                 }
             }
@@ -76,19 +77,21 @@ public class GameActivity extends AppCompatActivity{
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n2.setText(player1);
+                        tv.setText(setTextPlayer(player1)+"'s Turn");
                         board[1] = player1;
                     } else {
                         n2.setText(player2);
+                        tv.setText(setTextPlayer(player2)+"'s Turn");
                         board[1] = player2;
                     }
                     n2.setClickable(false);
                 }
                 if(isWin() && counter%2==0){
-                    tv.setText("Player1 wins");
+                    tv.setText(setTextPlayer(player1)+" Wins!");
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
-                    tv.setText("Player2 wins");
+                    tv.setText(setTextPlayer(player2)+" Wins!");
                     viewImport();
                 }
             }
@@ -101,19 +104,21 @@ public class GameActivity extends AppCompatActivity{
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n3.setText(player1);
+                        tv.setText(setTextPlayer(player1)+"'s Turn");
                         board[2] = player1;
                     } else {
                         n3.setText(player2);
+                        tv.setText(setTextPlayer(player2)+"'s Turn");
                         board[2] = player2;
                     }
                     n3.setClickable(false);
                 }
                 if(isWin() && counter%2==0){
-                    tv.setText("Player1 wins");
+                    tv.setText(setTextPlayer(player1)+" Wins!");
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
-                    tv.setText("Player2 wins");
+                    tv.setText(setTextPlayer(player2)+" Wins!");
                     viewImport();
                 }
             }
@@ -126,19 +131,21 @@ public class GameActivity extends AppCompatActivity{
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n4.setText(player1);
+                        tv.setText(setTextPlayer(player1)+"'s Turn");
                         board[3] = player1;
                     } else {
                         n4.setText(player2);
+                        tv.setText(setTextPlayer(player2)+"'s Turn");
                         board[3] = player2;
                     }
                     n4.setClickable(false);
                 }
                 if(isWin() && counter%2==0){
-                    tv.setText("Player1 wins");
+                    tv.setText(setTextPlayer(player1)+" Wins!");
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
-                    tv.setText("Player2 wins");
+                    tv.setText(setTextPlayer(player2)+" Wins!");
                     viewImport();
                 }
             }
@@ -151,19 +158,21 @@ public class GameActivity extends AppCompatActivity{
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n5.setText(player1);
+                        tv.setText(setTextPlayer(player1)+"'s Turn");
                         board[4] = player1;
                     } else {
                         n5.setText(player2);
+                        tv.setText(setTextPlayer(player2)+"'s Turn");
                         board[4] = player2;
                     }
                     n5.setClickable(false);
                 }
                 if(isWin() && counter%2==0){
-                    tv.setText("Player1 wins");
+                    tv.setText(setTextPlayer(player1)+" Wins!");
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
-                    tv.setText("Player2 wins");
+                    tv.setText(setTextPlayer(player2)+" Wins!");
                     viewImport();
                 }
             }
@@ -176,19 +185,21 @@ public class GameActivity extends AppCompatActivity{
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n6.setText(player1);
+                        tv.setText(setTextPlayer(player1)+"'s Turn");
                         board[5] = player1;
                     } else {
                         n6.setText(player2);
+                        tv.setText(setTextPlayer(player2)+"'s Turn");
                         board[5] = player2;
                     }
                     n6.setClickable(false);
                 }
                 if(isWin() && counter%2==0){
-                    tv.setText("Player1 wins");
+                    tv.setText(setTextPlayer(player1)+" Wins!");
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
-                    tv.setText("Player2 wins");
+                    tv.setText(setTextPlayer(player2)+" Wins!");
                     viewImport();
                 }
             }
@@ -201,19 +212,21 @@ public class GameActivity extends AppCompatActivity{
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n7.setText(player1);
+                        tv.setText(setTextPlayer(player1)+"'s Turn");
                         board[6] = player1;
                     } else {
                         n7.setText(player2);
+                        tv.setText(setTextPlayer(player2)+"'s Turn");
                         board[6] = player2;
                     }
                     n7.setClickable(false);
                 }
                 if(isWin() && counter%2==0){
-                    tv.setText("Player1 wins");
+                    tv.setText(setTextPlayer(player1)+" Wins!");
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
-                    tv.setText("Player2 wins");
+                    tv.setText(setTextPlayer(player2)+" Wins!");
                     viewImport();
                 }
             }
@@ -226,19 +239,21 @@ public class GameActivity extends AppCompatActivity{
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n8.setText(player1);
+                        tv.setText(setTextPlayer(player1)+"'s Turn");
                         board[7] = player1;
                     } else {
                         n8.setText(player2);
+                        tv.setText(setTextPlayer(player2)+"'s Turn");
                         board[7] = player2;
                     }
                     n8.setClickable(false);
                 }
                 if(isWin() && counter%2==0){
-                    tv.setText("Player1 wins");
+                    tv.setText(setTextPlayer(player1)+" Wins!");
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
-                    tv.setText("Player2 wins");
+                    tv.setText(setTextPlayer(player2)+" Wins!");
                     viewImport();
                 }
             }
@@ -251,19 +266,21 @@ public class GameActivity extends AppCompatActivity{
                 if(!isWin()) {
                     if (counter % 2 == 0) {
                         n9.setText(player1);
+                        tv.setText(setTextPlayer(player1)+"'s Turn");
                         board[8] = player1;
                     } else {
                         n9.setText(player2);
+                        tv.setText(setTextPlayer(player2)+"'s Turn");
                         board[8] = player2;
                     }
                     n9.setClickable(false);
                 }
                 if(isWin() && counter%2==0){
-                    tv.setText("Player1 wins");
+                    tv.setText(setTextPlayer(player1)+" Wins!");
                     viewImport();
                 }
                 else if(isWin() && counter%2==1){
-                    tv.setText("Player2 wins");
+                    tv.setText(setTextPlayer(player2)+" Wins!");
                     viewImport();
                 }
             }
