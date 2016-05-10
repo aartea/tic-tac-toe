@@ -59,6 +59,5 @@ public class MainActivity extends AppCompatActivity {
         s = String.valueOf(prefs.getString("winner",""));
 
         previousWin.setText("Previous winner was: \n\n"+s);
-
         }
     }
