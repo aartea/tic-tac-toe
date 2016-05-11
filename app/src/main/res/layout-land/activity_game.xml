@@ -17,7 +17,11 @@
         android:textAlignment="center"
         android:textSize="45dp"
         android:text="Tic-Tac-Toe"
-        android:id="@+id/tv"/>
+        android:id="@+id/tv"
+        android:layout_toRightOf="@+id/main_grid"
+        android:layout_toEndOf="@+id/main_grid"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true" />
 
     <GridLayout
         android:layout_alignParentBottom="true"
@@ -26,7 +30,7 @@
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:paddingTop="0dp"
-        android:paddingBottom="80dp"
+        android:paddingBottom="0dp"
         android:id="@+id/main_grid">
 
 
